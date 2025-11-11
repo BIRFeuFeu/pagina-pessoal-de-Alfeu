@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const defaultConfig = {
     main_title: "Alfeu de Paula",
     subtitle: "Lutador de Judô",
-    description: "Escreva aqui uma breve descrição sobre você. Conte um pouco sobre sua personalidade, seus interesses e o que faz você único. Esta é sua oportunidade de se apresentar ao mundo!",
+    description: "Tenho 16 anos, e curso o 2° ano do tecnico de Desemvolvimento de Sistemas no Colegio Julio Szymanki, no contra-turno, sou lutador judô representando a prefeitura de Araucária",
     section_title: "Conheça Minha História",
     section_subtitle: "Explore diferentes aspectos da minha vida e jornada pessoal",
     biography_title: "Biografia",
