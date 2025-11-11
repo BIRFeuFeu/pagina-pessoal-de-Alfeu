@@ -30,21 +30,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentCategory = null;
 
+  // MAPA DE CATEGORIAS ATUALIZADO COM IMAGENS
   const categoryMap = {
-    biography: { title: 'biography_title', content: 'biography_content' },
-    profession: { title: 'profession_title', content: 'profession_content' },
-    friends: { title: 'friends_title', content: 'friends_content' },
-    relationship: { title: 'relationship_title', content: 'relationship_content' },
-    school: { title: 'school_title', content: 'school_content' },
-    future: { title: 'future_title', content: 'future_content' }
+    biography:    { title: 'biography_title',    content: 'biography_content',    image: 'images/biografia.jpg' },
+    profession:   { title: 'profession_title',   content: 'profession_content',   image: 'images/profissao.jpg' },
+    friends:      { title: 'friends_title',      content: 'friends_content',      image: 'images/amigos.jpg' },
+    relationship: { title: 'relationship_title', content: 'relationship_content', image: 'images/relacionamento.jpg' },
+    school:       { title: 'school_title',       content: 'school_content',       image: 'images/escola.jpg' },
+    future:       { title: 'future_title',       content: 'future_content',       image: 'images/futuro.jpg' }
   };
 
+  // FUNÇÃO OPENMODAL ATUALIZADA
   function openModal(category) {
     const config = window.elementSdk ? window.elementSdk.config : defaultConfig;
     const categoryInfo = categoryMap[category];
     
     document.getElementById('modalTitle').textContent = config[categoryInfo.title] || defaultConfig[categoryInfo.title];
     document.getElementById('modalContent').textContent = config[categoryInfo.content] || defaultConfig[categoryInfo.content];
+    
+    // --- ATUALIZA A FOTO DO MODAL ---
+    document.getElementById('modalPhoto').style.backgroundImage = `url("${categoryInfo.image}")`;
     
     document.getElementById('modalPopup').classList.add('active');
     currentCategory = category;
@@ -55,6 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
     currentCategory = null;
   }
 
+  // FUNÇÃO ONCONFIGCHANGE ATUALIZADA (TEMA ESCURO)
   async function onConfigChange(config) {
     document.getElementById('mainTitle').textContent = config.main_title || defaultConfig.main_title;
     document.getElementById('subtitle').textContent = config.subtitle || defaultConfig.subtitle;
@@ -86,12 +92,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // Aplica as cores nos elementos corretos
     document.getElementById('closeModal').style.background = primaryColor;
     document.querySelector('#modalPopup > div').style.background = backgroundColor;
-     document.querySelector('#modalPopup > div > div[style*="height: 400px"]').style.background = primaryColor; // Foto do modal
-     document.querySelector('#modalPopup > div > div[style*="margin-bottom: 30px"] > h2').style.color = textColor; // Título "Sua História"
-     document.getElementById('modalContent').style.color = textColor;
-     document.getElementById('modalContent').style.borderColor = primaryColor;
-     document.getElementById('modalContent').style.background = 'rgba(0,0,0,0.2)'; // Fundo do texto do modal
+    // document.getElementById('modalPhoto').style.background = primaryColor; // Remove, pois agora é uma imagem
+    document.querySelector('#modalPopup > div > div[style*="margin-bottom: 30px"] > h2').style.color = textColor; // Título "Sua História"
+    document.getElementById('modalContent').style.color = textColor;
+    document.getElementById('modalContent').style.borderColor = primaryColor;
+    document.getElementById('modalContent').style.background = 'rgba(0,0,0,0.2)'; // Fundo do texto do modal
     document.getElementById('modalTitle').style.color = textColor;
+    
+    // Cor da borda hover do card
+    document.querySelectorAll('.category-card').forEach(card => {
+        card.addEventListener('mouseenter', () => card.style.borderColor = primaryColor);
+        card.addEventListener('mouseleave', () => card.style.borderColor = 'transparent');
+    });
+    
+    // Cor da barra de cima do card no hover
+    document.querySelectorAll('.category-card::before').forEach(el => {
+        el.style.background = primaryColor;
+    });
 
 
     const cards = document.querySelectorAll('.category-card');
@@ -101,11 +118,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categoryImages = document.querySelectorAll('.category-image');
     categoryImages.forEach(img => {
-      img.style.background = primaryColor;
+      // Não definimos mais o 'background' aqui, pois é uma imagem
+      // img.style.background = primaryColor; 
     });
 
     const profilePhoto = document.querySelector('.profile-photo');
-    profilePhoto.style.background = textColor;
+    // Não definimos mais o 'background' aqui, pois é uma imagem
+    // profilePhoto.style.background = textColor; 
 
     const titles = document.querySelectorAll('.hero-title, .category-title, .section-title, .section-subtitle');
     titles.forEach(title => {
@@ -118,10 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const categoriesSection = document.querySelector('.categories-section');
-    // CORREÇÃO: Usa a cor de fundo do config em vez de amarelo fixo
     categoriesSection.style.background = backgroundColor; 
 
-    // Aplica a cor no subtitulo do hero (que estava sendo sobrescrito pelo CSS)
     document.querySelector('.hero-subtitle').style.color = accentColor;
   }
 
