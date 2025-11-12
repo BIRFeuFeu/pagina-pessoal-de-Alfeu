@@ -7,16 +7,45 @@ document.addEventListener('DOMContentLoaded', () => {
     description: "Escreva aqui uma breve descrição sobre você. Conte um pouco sobre sua personalidade, seus interesses e o que faz você único. Esta é sua oportunidade de se apresentar ao mundo!",
     section_title: "Conheça Minha História",
     section_subtitle: "Explore diferentes aspectos da minha vida e jornada pessoal",
+    
     biography_title: "Biografia",
-    biography_content: "Aqui você pode escrever sua biografia completa. Conte sobre sua infância, suas origens, momentos marcantes da sua vida e como você se tornou a pessoa que é hoje. Compartilhe suas memórias favoritas e experiências que moldaram sua personalidade.",
+    biography_content: `Eu sou Alfeu Vantuir e, para os que não sabem, sim, meu nome é composto, por mais que não pareça. Tenho 16 anos e meu aniversário é no dia 22 de julho. Nasci em Curitiba, no ano de 2009, porém sempre morei em Araucária.
+
+Desde sempre tentei ser alguém bom, alguém gentil, procurando fazer o bem ao próximo, mesmo que essa pessoa, às vezes, não mereça. Sei que pratico um esporte de luta, mas não o faço para brigar, muito menos para usá-lo contra outras pessoas em benefício próprio. Pratico o judô pela minha defesa pessoal e também pela defesa dos meus amigos e da minha família.
+
+Como meu pai disse: “O seu corpo se tornou uma arma a partir do momento em que começou a treinar.” Isso é verdade. No entanto, algo que o judô me ensinou é que machucar o outro nunca foi necessário — e nem vai ser algum dia. A briga, para mim, serve apenas para alimentar o ego de quem se acha superior, algo com o qual sou totalmente contra. Por isso, sempre procuro resolver as coisas de forma pacífica.
+
+Essa filosofia também influenciou muito minha personalidade. Sou uma pessoa calma e serena; muitos já me disseram que sou “calmo demais” para alguém que luta, mas sempre levei isso como um elogio. Falando mais sobre minha personalidade, tenho um humor ácido, rio de tudo e sou alguém feliz — feliz com o que tenho, com a minha vida, com quem está ao meu lado e muito grato por tudo.
+
+Falando sobre minha infância, passei-a com meu irmão, Alex Fabiano, dois anos mais novo que eu, e com meus pais, Josiane Silva e Fabiano Aparecido. Por conta do nascimento do meu irmão, vivi uma pequena parte da minha vida morando em Foz do Iguaçu, cidade natal da minha mãe e dele.
+
+Não me lembro de muita coisa, pois era muito novo, mas o que mais me marcou foi o calor extremo. Lá é muito quente — tão quente a ponto de atacar minha dermatite, algo que tenho desde sempre. Pra quem não sabe, dermatite é praticamente uma reação alérgica da pele, que acontece quando a pessoa sua demais. No meu caso, é algo leve.
+
+Após alguns meses vivendo lá, voltamos para Araucária. Eu tinha entre 2 e 4 anos, e, a partir daí, tenho apenas pequenas lembranças: lembro de quando morávamos em um sobrado — foi a primeira vez que vi neve! Foi incrível, uma experiência que nunca vou esquecer. Também lembro de outro sobrado, não o mesmo, onde passei uma Páscoa mágica: meus pais enfeitaram a casa inteira com pegadas, ovos e muitas outras coisas. Guardo essas memórias com muito carinho.
+
+A metade da minha vida, dos 6 aos 14 anos, foi a época da escola — o ensino fundamental —, onde fiz muitos amigos valiosos, alguns dos quais levo comigo até hoje. Posso dizer que amo a todos eles.
+
+Falando agora sobre a fase que vivo, posso afirmar com toda certeza que estou feliz. Tenho uma família que me apoia, um irmão que me admira e me ensina, e uma namorada que me ama muito. Minha vida é perfeita — não tenho do que reclamar.
+
+Claro, ainda tenho muitos sonhos e ambições que quero conquistar, e sou convicto de que vou conseguir todos. Mas, se minha vida se mantivesse assim, eu também estaria satisfeito.`,
+    
     profession_title: "Profissão",
-    profession_content: "Descreva sua carreira profissional, suas habilidades, conquistas e projetos importantes. Fale sobre sua formação, experiências de trabalho e o que você ama fazer profissionalmente. Compartilhe seus sucessos e aprendizados.",
+    // --- SEU TEXTO FOI ADICIONADO AQUI ---
+    profession_content: `Comecei o judô com 6 anos, como faixa branca. Por conta de alguns problemas, acabei parando, mas voltei um ano depois, com a minha sensei atual, Sensei Jacqueline, que atualmente é faixa-preta.
+Quando comecei meu treinamento, meu objetivo era melhorar minha coordenação motora, que era horrível — eu tropeçava nos meus próprios pés e precisava melhorar isso. Felizmente, consegui. Hoje, minha coordenação está muito melhor do que a de muitas pessoas.
+Sobre o futuro, no início eu não tinha visão nenhuma, muito menos sobre quem eu poderia me tornar com o judô. Eu treinava apenas por hobby. Mas, quando fiz 14 anos, comecei a competir de forma séria. Nesse mesmo ano, conquistei a classificação para o Campeonato Brasileiro de Judô — uma conquista muito importante, já que, em Araucária, antes de mim e do meu irmão, apenas minha sensei havia conseguido isso, 13 anos atrás.
+Nesse campeonato, caso eu vencesse, poderia competir internacionalmente — um sonho! Porém, isso não aconteceu. Ganhei quatro lutas, mas perdi duas, o que me deixou fora da competição. Mesmo assim, consegui ficar em sétimo lugar, o que para mim já foi uma grande conquista. Naquele ano, fui o sétimo melhor de todo o Brasil na minha categoria.
+A partir daquele dia, descobri que posso ser mais, que tenho potencial para ir ainda mais longe. Desde então, venho treinando intensamente para realizar o meu sonho: ser um campeão olímpico.`,
+    
     friends_title: "Amigos e Família",
     friends_content: "Fale sobre as pessoas especiais em sua vida - seus amigos mais próximos e sua família. Compartilhe histórias engraçadas, momentos memoráveis e o que essas pessoas significam para você. Descreva as tradições familiares e amizades duradouras.",
+    
     relationship_title: "Relacionamento",
     relationship_content: "Compartilhe sobre sua vida amorosa e relacionamentos significativos. Fale sobre o que você valoriza em um parceiro, suas experiências românticas e o que o amor significa para você. Conte sua história de amor ou suas expectativas para o futuro.",
+    
     school_title: "Escola",
     school_content: "Descreva sua jornada educacional desde a infância até hoje. Fale sobre suas escolas favoritas, professores marcantes, matérias que você amava e conquistas acadêmicas. Compartilhe memórias da época de estudante e como a educação impactou sua vida.",
+    
     future_title: "Planos Futuros",
     future_content: "Compartilhe seus sonhos e planos para o futuro. Onde você se vê daqui a 5 ou 10 anos? Quais são seus objetivos pessoais e profissionais? Fale sobre seus projetos, aspirações e o legado que deseja deixar.",
     
